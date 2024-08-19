@@ -123,3 +123,13 @@ button:hover {
         font-size: 14px;
     }
 }
+.square-container {
+    background-color: #ffffff;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
