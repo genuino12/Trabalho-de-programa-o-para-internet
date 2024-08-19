@@ -32,6 +32,13 @@ header h1 {
     font-weight: bold;
     
 }
+.header {
+    padding: 1em;
+    background-color: #f8f8f8;
+    border-bottom: 2px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
 main {
     margin-top: 400px; 
