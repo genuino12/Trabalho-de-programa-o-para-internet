@@ -27,6 +27,16 @@ header h1 {
     font-size: 2em; 
     font-weight: bold;
 }
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    position: relative; /* Adicionado */
+    z-index: 1; /* Adicionado */
+}
 .event-list {
     display: flex; 
     flex-wrap: wrap; 
