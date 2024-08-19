@@ -145,14 +145,13 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
 }
   
-
 .links {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .links .btn.secondary {
     background-color: #009688; /* Cor de fundo dos botões secundários */
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .links .btn.secondary:hover {
