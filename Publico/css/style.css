@@ -57,6 +57,15 @@ main {
     font-size: 1.5rem;
     color: #333;
 }
+#event-details {
+    max-width: 600px;
+    width: 100%; /* Ocupa toda a largura disponível dentro do main */
+    padding: 1em;
+    border: 2px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Cor de fundo para melhor visualização */
+}
 
 .btn {
     display: inline-block;
