@@ -195,3 +195,13 @@ button:hover {
 .auth-links .signup-btn:hover {
     background-color: #00796b;
 }
+#event-details {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#ticket-quantity {
+    width: 60px;
+}
+
+
