@@ -18,16 +18,16 @@ header {
 }
 header h1 {
     margin: 0;
-    font-size: 2em; /* Tamanho do texto */
+    font-size: 2em; 
     font-weight: bold;
 }
 
 .event-list {
-    display: flex;  /* Usa flexbox para alinhar os itens */
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
-    gap: 1rem;       /* Espaçamento entre os itens */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 1rem;       
     padding: 1rem;
-    justify-content: center; /* Centraliza os itens */
+    justify-content: center; 
 }
 
 .event-item {
