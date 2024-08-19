@@ -173,3 +173,9 @@ button:hover {
 .auth-links .signup-btn:hover {
     background-color: #00796b;
 }
+.black-line {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+}
