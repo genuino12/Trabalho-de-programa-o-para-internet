@@ -144,4 +144,32 @@ button:hover {
     border-radius: 15px; /* Bordas arredondadas mais suaves */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
 }
-  
+.auth-links {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.auth-links .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.auth-links .login-btn {
+    background-color: #004d40;
+}
+
+.auth-links .login-btn:hover {
+    background-color: #00332d;
+}
+
+.auth-links .signup-btn {
+    background-color: #009688;
+}
+
+.auth-links .signup-btn:hover {
+    background-color: #00796b;
+}
