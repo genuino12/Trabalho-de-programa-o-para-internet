@@ -84,6 +84,23 @@ main {
         max-width: 100%;
     }
 }
+/* Responsividade */
+@media (max-width: 768px) {
+    .event-item {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .event-item {
+        width: 100%;
+    }
+    .auth-links {
+        position: static;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
 
 .login-container {
     text-align: center;
