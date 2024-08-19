@@ -12,21 +12,28 @@ header {
     text-align: center;
 }
 
-.event-list, .event-details {
+.event-list {
+    display: flex;  /* Usa flexbox para alinhar os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+    gap: 1rem;       /* Espaçamento entre os itens */
     padding: 1rem;
-    margin: 0 auto;
-    max-width: 600px;
+    justify-content: center; /* Centraliza os itens */
 }
 
-.event-item, .event-details {
+.event-item {
     border: 1px solid #ddd;
     padding: 1rem;
-    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+    flex: 1 1 calc(33.333% - 2rem); /* Cada item ocupa 1/3 da largura, menos a margem */
+    box-sizing: border-box;
+    max-width: calc(33.333% - 2rem); /* Impede que os itens excedam o tamanho definido */
+    min-width: 250px; /* Define uma largura mínima para que os itens não fiquem muito pequenos */
 }
 
-.event-item h2, .event-details h2 {
+.event-item h2 {
     margin: 0;
     font-size: 1.5rem;
+    color: #333;
 }
 
 .btn {
@@ -36,18 +43,25 @@ header {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 1rem;
 }
 
 .btn:hover {
     background-color: #0056b3;
 }
 
-@media (max-width: 600px) {
-    .event-item, .event-details {
-        padding: 0.5rem;
-    }
-
-    .btn {
-        padding: 0.3rem 0.6rem;
+/* Layout responsivo */
+@media (max-width: 768px) {
+    .event-item {
+        flex: 1 1 calc(50% - 2rem); /* Em telas menores, os itens ocupam metade da largura */
+        max-width: calc(50% - 2rem);
     }
 }
+
+@media (max-width: 480px) {
+    .event-item {
+        flex: 1 1 100%; /* Em telas muito pequenas, cada item ocupa toda a largura */
+        max-width: 100%;
+    }
+}
+
