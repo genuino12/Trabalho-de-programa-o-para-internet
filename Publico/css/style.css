@@ -10,10 +10,16 @@ body {
 }
 
 header {
-    background-color: blue;
-    color: white;
-    padding: 1rem;
+    background-color: #007bff; 
+    color: white; 
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    margin: 0;
+    font-size: 2em; /* Tamanho do texto */
+    font-weight: bold;
 }
 
 .event-list {
