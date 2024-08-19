@@ -8,6 +8,10 @@ body {
     margin: 0;
    
 }
+.container {
+    display: flex;
+    flex-direction: column; /* Alinha o header e main verticalmente */
+}
 
 header {
     background-color: #007bff; 
