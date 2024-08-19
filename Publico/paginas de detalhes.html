@@ -4,126 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Evento</title>
-    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="styles.css"> <!-- Estilos CSS -->
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Detalhes do Evento</h1>
-            <div class="auth-links">
-                <a href="home.html" class="btn ">voltar</a>
+    <header>
+        <h1>Detalhes do Evento</h1>
+    </header>
+
+    <main>
+        <section id="event-details">
+            <h2 id="event-name">Nome do Evento</h2>
+
+            <div class="event-info">
+                <div>
+                    <p><strong>Descrição:</strong> Este é um evento imperdível com uma performance espetacular!</p>
+                    <p><strong>Data e Hora:</strong> 25 de Agosto de 2024, 20:00</p>
+                </div>
+                <div>
+                    <p><strong>Local:</strong> Auditório Principal, Rua das Flores, 123</p>
+                    <p><strong>Preço:</strong> R$ 50,00</p>
+                    <p><strong>Ingressos Disponíveis:</strong> 200</p>
+                </div>
             </div>
-        </header>
 
-        <main>
-            <section id="event-details">
-                <h2 id="event-name">Show do Artista X</h2>
-                <div class="event-info">
-                    <div>
-                        <p id="event-description">Junte-se a nós para uma noite incrível com o Artista X! Com uma performance enérgica e inesquecível.</p>
-                        <p id="event-date">Data e Hora: 25/08/2024 as 21:00 horas </p>
-                    </div>
-                    <div>
-                        <p id="event-location">Local:  Teatro ABC </p>
-                        <p id="event-price">Preço: R$150,00</p>
-                        <p id="tickets-available">Ingressos Disponíveis: 500 </p>
-                    </div>
-                </div>
-                <label for="ticket-quantity">Quantidade de Ingressos:</label>
-                <input type="number" id="ticket-quantity" min="1" max="500" value="1">
-                <p id="total-price">Valor Total: R$ 0,00</p>
-                <button id="purchase-button">Comprar</button>
-                <br>
-                <h2 id="event-name">Show do Artista X</h2>
-                <div class="event-info">
-                    <div>
-                        <p id="event-description">Junte-se a nós para uma noite incrível com o Artista X! Com uma performance enérgica e inesquecível.</p>
-                        <p id="event-date">Data e Hora: 25/08/2024 as 21:00 horas </p>
-                    </div>
-                    <div>
-                        <p id="event-location">Local:  Teatro ABC </p>
-                        <p id="event-price">Preço: R$150,00</p>
-                        <p id="tickets-available">Ingressos Disponíveis: 500 </p>
-                    </div>
-                </div>
-                <label for="ticket-quantity">Quantidade de Ingressos:</label>
-                <input type="number" id="ticket-quantity" min="1" max="500" value="1">
-                <p id="total-price">Valor Total: R$ 0,00</p>
-                <button id="purchase-button">Comprar</button>
-                <br>
-                <h2 id="event-name">Show do Artista X</h2>
-                <div class="event-info">
-                    <div>
-                        <p id="event-description">Junte-se a nós para uma noite incrível com o Artista X! Com uma performance enérgica e inesquecível.</p>
-                        <p id="event-date">Data e Hora: 25/08/2024 as 21:00 horas </p>
-                    </div>
-                    <div>
-                        <p id="event-location">Local:  Teatro ABC </p>
-                        <p id="event-price">Preço: R$150,00</p>
-                        <p id="tickets-available">Ingressos Disponíveis: 500 </p>
-                    </div>
-                </div>
-                <label for="ticket-quantity">Quantidade de Ingressos:</label>
-                <input type="number" id="ticket-quantity" min="1" max="500" value="1">
-                <p id="total-price">Valor Total: R$ 0,00</p>
-                <button id="purchase-button">Comprar</button>
-                <br>
-                <h2 id="event-name">Show do Artista X</h2>
-                <div class="event-info">
-                    <div>
-                        <p id="event-description">Junte-se a nós para uma noite incrível com o Artista X! Com uma performance enérgica e inesquecível.</p>
-                        <p id="event-date">Data e Hora: 25/08/2024 as 21:00 horas </p>
-                    </div>
-                    <div>
-                        <p id="event-location">Local:  Teatro ABC </p>
-                        <p id="event-price">Preço: R$150,00</p>
-                        <p id="tickets-available">Ingressos Disponíveis: 500 </p>
-                    </div>
-                </div>
-                <label for="ticket-quantity">Quantidade de Ingressos:</label>
-                <input type="number" id="ticket-quantity" min="1" max="500" value="1">
-                <p id="total-price">Valor Total: R$ 0,00</p>
-                <button id="purchase-button">Comprar</button>
-                <br>
-                <h2 id="event-name">Show do Artista X</h2>
-                <div class="event-info">
-                    <div>
-                        <p id="event-description">Junte-se a nós para uma noite incrível com o Artista X! Com uma performance enérgica e inesquecível.</p>
-                        <p id="event-date">Data e Hora: 25/08/2024 as 21:00 horas </p>
-                    </div>
-                    <div>
-                        <p id="event-location">Local:  Teatro ABC </p>
-                        <p id="event-price">Preço: R$150,00</p>
-                        <p id="tickets-available">Ingressos Disponíveis: 500 </p>
-                    </div>
-                </div>
-                <label for="ticket-quantity">Quantidade de Ingressos:</label>
-                <input type="number" id="ticket-quantity" min="1" max="500" value="1">
-                <p id="total-price">Valor Total: R$ 0,00</p>
-                <button id="purchase-button">Comprar</button>
-                <Br>
-                    <h2 id="event-name">Show do Artista X</h2>
-                    <div class="event-info">
-                        <div>
-                            <p id="event-description">Junte-se a nós para uma noite incrível com o Artista X! Com uma performance enérgica e inesquecível.</p>
-                            <p id="event-date">Data e Hora: 25/08/2024 as 21:00 horas </p>
-                        </div>
-                        <div>
-                            <p id="event-location">Local:  Teatro ABC </p>
-                            <p id="event-price">Preço: R$150,00</p>
-                            <p id="tickets-available">Ingressos Disponíveis: 500 </p>
-                        </div>
-                    </div>
-                    <label for="ticket-quantity">Quantidade de Ingressos:</label>
-                    <input type="number" id="ticket-quantity" min="1" max="500" value="1">
-                    <p id="total-price">Valor Total: R$ 0,00</p>
-                    <button id="purchase-button">Comprar</button>
-            </section>
+            <label for="ticket-quantity">Quantidade de Ingressos:</label>
+            <input type="number" id="ticket-quantity" min="1" max="10" value="1">
 
-            
-        </main>
-    </div>
+            <p id="total-price">Valor Total: R$ 50,00</p>
 
-    <script src="event-details.js"></script>
+            <button id="purchase-button">Comprar</button>
+        </section>
+    </main>
+
+    <script src="event-details.js"></script> <!-- Arquivo JavaScript -->
 </body>
 </html>
