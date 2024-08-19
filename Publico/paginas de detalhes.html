@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Eventos</title>
+    <title>Detalhes do Evento</title>
     <link rel="stylesheet" href="./css/style.css"> 
 </head>
 <body>
     <header>
-        <h1>Eventos</h1>
+        <h1>Detalhes do Evento</h1>
     </header>
 
     <main>
-        <div class="events-container">
-            <article class="event">
-                <h2>Evento 1</h2>
-                <p>Descrição breve do Evento 1.</p>
-                <p><strong>Data e Hora:</strong> 25 de Agosto de 2024, 20:00</p>
-                <p><strong>Local:</strong> Auditório Principal</p>
-                <p><strong>Preço:</strong> R$ 50,00</p>
-                <button class="button">Comprar </button>
-            </article>
+        <section id="event-details">
+            <h2 id="event-name">Nome do Evento</h2>
 
-            <article class="event">
-                <h2>Evento 2</h2>
-                <p>Descrição breve do Evento 2.</p>
-                <p><strong>Data e Hora:</strong> 30 de Agosto de 2024, 19:00</p>
-                <p><strong>Local:</strong> Sala de Concertos</p>
-                <p><strong>Preço:</strong> R$ 60,00</p>
-                <a href="event-details.html" class="button">Mais Detalhes</a>
-            </article>
+            <div class="event-info">
+                <div>
+                    <p><strong>Descrição:</strong> Este é um evento imperdível com uma performance espetacular!</p>
+                    <p><strong>Data e Hora:</strong> 25 de Agosto de 2024, 20:00</p>
+                </div>
+                <div>
+                    <p><strong>Local:</strong> Auditório Principal, Rua das Flores, 123</p>
+                    <p><strong>Preço:</strong> R$ 50,00</p>
+                    <p><strong>Ingressos Disponíveis:</strong> 200</p>
+                </div>
+            </div>
 
-            <!-- Adicione mais eventos conforme necessário -->
-        </div>
+            <label for="ticket-quantity">Quantidade de Ingressos:</label>
+            <input type="number" id="ticket-quantity" min="1" max="10" value="1">
+
+            <p id="total-price">Valor Total: R$ 50,00</p>
+
+            <button id="purchase-button">Comprar</button>
+        </section>
     </main>
+
+    <script src="event-details.js"></script> <!-- Arquivo JavaScript -->
 </body>
 </html>
