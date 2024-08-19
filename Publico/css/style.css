@@ -26,6 +26,11 @@ header h1 {
     margin: 0;
     font-size: 2em; 
     font-weight: bold;
+    
+}
+.container {
+    display: flex;
+    flex-direction: row; /* Alinha header e main lado a lado */
 }
 main {
     margin-top: 300px; 
