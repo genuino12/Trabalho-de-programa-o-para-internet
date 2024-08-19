@@ -4,43 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Evento</title>
-    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./css/style.css"> <!-- Estilos CSS -->
 </head>
 <body>
-<div class="container">
-    <header>
-        <h1>Detalhes do Evento</h1>
-    </header>
-</div> 
-<br>
-    <main>
-        <section id="event-details">
-            <h2 id="event-name">Show do Artista X</h2>
-            <p id="event-description">Prepare-se para uma noite inesquecível com o incrível Artista X! Em um espetáculo que mistura o melhor da música ao vivo com uma produção visual deslumbrante, Artista X trará ao palco seus maiores sucessos e algumas surpresas exclusivas. Com uma performance energética e uma interação única com o público, este show promete ser uma celebração contagiante da música e da arte. Não perca a chance de vivenciar uma experiência musical excepcional e emocionante!</p>
-            <p id="event-date">Data e Hora: 25/08/2024, 21:00 </p>
-            <p id="event-location">Local: Teatro ABC </p>
-            <p id="event-price">Preço: R$150,00 R$</p>
-            <p id="tickets-available">Ingressos Disponíveis: 500</p>
-            <label for="ticket-quantity">Quantidade de Ingressos:</label>
-            <input type="number" id="ticket-quantity" min="1" max="10" value="1">
-            <p id="total-price">Valor Total: R$ 0,00</p>
-            <button id="purchase-button">Comprar</button>
-        </section>
-<br>
-        <section id="event-details">
-            <h2 id="event-name">Show do Artista X</h2>
-            <p id="event-description">Prepare-se para uma noite inesquecível com o incrível Artista X! Em um espetáculo que mistura o melhor da música ao vivo com uma produção visual deslumbrante, Artista X trará ao palco seus maiores sucessos e algumas surpresas exclusivas. Com uma performance energética e uma interação única com o público, este show promete ser uma celebração contagiante da música e da arte. Não perca a chance de vivenciar uma experiência musical excepcional e emocionante!</p>
-            <p id="event-date">Data e Hora: 25/08/2024, 21:00 </p>
-            <p id="event-location">Local: Teatro ABC </p>
-            <p id="event-price">Preço: R$150,00 R$</p>
-            <p id="tickets-available">Ingressos Disponíveis: 500</p>
-            <label for="ticket-quantity">Quantidade de Ingressos:</label>
-            <input type="number" id="ticket-quantity" min="1" max="10" value="1">
-            <p id="total-price">Valor Total: R$ 0,00</p>
-            <button id="purchase-button">Comprar</button>
-        </section>
-    </main>
-    <script src="event-details.js"></script>
- 
+    <div class="container">
+        <header>
+            <h1>Detalhes do Evento</h1>
+        </header>
+
+        <main>
+            <section id="event-details">
+                <h2 id="event-name">Nome do Evento</h2>
+
+                <div class="event-info">
+                    <div>
+                        <p id="event-description">Descrição do evento...</p>
+                        <p id="event-date">Data e Hora: </p>
+                    </div>
+                    <div>
+                        <p id="event-location">Local: </p>
+                        <p id="event-price">Preço: R$</p>
+                        <p id="tickets-available">Ingressos Disponíveis: </p>
+                    </div>
+                </div>
+
+                <label for="ticket-quantity">Quantidade de Ingressos:</label>
+                <input type="number" id="ticket-quantity" min="1" max="10" value="1">
+
+                <p id="total-price">Valor Total: R$ 0,00</p>
+
+                <button id="purchase-button">Comprar</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="event-details.js"></script> <!-- Arquivo JavaScript -->
 </body>
 </html>
