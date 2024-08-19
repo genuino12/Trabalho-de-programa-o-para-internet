@@ -10,16 +10,14 @@ body {
 }
 
 header {
-    background-color: #007bff; 
-    color: white; 
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    position: relative; /* Adicionado */
+    z-index: 1; /* Adicionado */
 }
 
 header h1 {
