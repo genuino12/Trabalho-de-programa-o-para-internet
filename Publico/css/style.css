@@ -28,7 +28,7 @@ header h1 {
     font-weight: bold;
 }
 main {
-    margin-top: 200px; /* Espaçamento para evitar sobreposição com o header */
+    margin-top: 300px; 
     padding: 20px;
 }
 
