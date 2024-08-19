@@ -121,25 +121,18 @@ button:hover {
     background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 320px) {
+    .square-container {
+        width: 90%;
+        height: auto; /* Ajusta a altura conforme necessário */
+        padding: 20px;
+    }
+
     .login-container {
-        padding: 15px;
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
-    .login-container {
-        padding: 10px;
-    }
-
-    .input-group label {
-        font-size: 13px;
-    }
-
-    button {
-        font-size: 14px;
-    }
-}
 .square-container {
     background-color: #ffffff;
     width: 300px;
