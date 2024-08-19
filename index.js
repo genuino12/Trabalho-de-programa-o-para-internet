@@ -1,7 +1,7 @@
 import express from 'express';
 
 
-const host = '127.0.0.1'; //rede disponivel
+const host = '000.0.0.0'; //rede disponivel
 const porta = 4000; //porta
 const app = express();
 
