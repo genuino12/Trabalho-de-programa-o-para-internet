@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/genuino12/Trabalho-de-programa-o-para-internet/issues"
   },
-  "homepage": "https://github.com/genuino12/Trabalho-de-programa-o-para-internet#readme"
+  "homepage": "https://github.com/genuino12/Trabalho-de-programa-o-para-internet#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }
