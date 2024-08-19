@@ -103,3 +103,23 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 10px;
+    }
+
+    .input-group label {
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
