@@ -150,15 +150,4 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);   
 }
-.links {
-    margin-top: 15px;
-}
 
-.links .btn.secondary {
-    background-color: #009688; /* Cor de fundo dos botões secundários */
-    margin-top: 10px;
-}
-
-.links .btn.secondary:hover {
-    background-color: #00796b; /* Cor ao passar o mouse para os botões secundários */
-}
