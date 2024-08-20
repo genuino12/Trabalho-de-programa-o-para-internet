@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const confirmarSenhaInput = document.getElementById('Rsenha')
     const emailError = document.getElementById('emailError');
     const senhaError = document.getElementById('senhaError');
-    const nomeInput = document.getElementById('nome');
+    const nomeInput = document.getElementById('nome').;
     const nomeError = document.getElementById('nomeError');
     const telefoneInput = document.getElementById('telefone');
     const telefoneError = document.getElementById('telefoneError');
@@ -46,10 +46,10 @@ function validateEmail(email) {
         return;
     }
 //validar nome
-const nome = nomeInput.value.trim();
-if (nome.length < 5) {
-    nomeError.textContent = 'O nome deve ter pelo menos 5 caracteres.';
-    return;
+var regexNome = /^[a-zA-Zà-úÀ-Ú\s]+$/;
+if (!regexNome.test(nome)) {
+    alert("Nome inválido! Insira apenas letras.");
+    return false;
 }
 // Valida telefone
 telefoneInput.addEventListener('input', function() {
@@ -109,5 +109,4 @@ function validatecpf(cpf) {
     window.location.href = 'login.html';
 }, 1000); 
 });
-
 });
