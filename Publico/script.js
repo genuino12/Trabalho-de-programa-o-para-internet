@@ -67,9 +67,12 @@ if (!regexNome.test(nome)) {
 }
 
 // Valida telefone
-telefoneInput.addEventListener('input', function() {
-    telefoneInput.value = telefoneInput.value.replace(/\D/g, '');
-});
+const telefone = telefoneInput.value; 
+const regexTelefone = /^[0-9\s\(\)\-\+\.]+$/;
+if (!regexTelefone.test(telefone)) {
+    alert("Telefone inválido! Insira apenas números e caracteres válidos.");
+    return false;
+}
 
 //validar cpf
 const cpf = cpfInput.value.trim();
