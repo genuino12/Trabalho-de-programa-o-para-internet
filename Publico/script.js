@@ -53,13 +53,13 @@ if (nome.length < 5) {
 }
 // Valida telefone
 const telefone = telefoneInput.value.trim();
- if (!validatePhone(phone)) {
+ if (!validatePhone(telefone)) {
       telefoneError.textContent = 'Por favor, insira um número de telefone válido.';
       return;
 }
-function validatePhone(phone) {
+function validatePhone(telefone) {
     const regex =/^\d{10,11}$/;
-    return regex.test(phone);
+    return regex.test(telefone);
 }
 
 });
