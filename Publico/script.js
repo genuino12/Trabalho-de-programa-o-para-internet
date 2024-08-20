@@ -108,6 +108,12 @@ function validatecpf(cpf) {
     const digito2 = calcularDigito(cpf.substring(0, 10), 11);
     return cpf.charAt(9) == digito1 && cpf.charAt(10) == digito2;
 }
-
+ // Simula o cadastro bem-sucedido
+ setTimeout(() => {
+    alert('Cadastro realizado com sucesso!');
+    form.reset(); 
+    window.location.href = 'login.html';
+}, 1000); 
 });
+
 });
