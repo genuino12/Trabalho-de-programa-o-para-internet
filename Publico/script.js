@@ -5,12 +5,14 @@ document.addEventListener('DOMContentLoaded', function(){
     const senhaInput = document.getElementById('senha');
     const emailError = document.getElementById('emailError');
     const senhaError = document.getElementById('senhaError');
+    const nomeInput = document.getElementById('nome');
 
     form.addEventListener('submit', function(event){
     event.preventDefault();
     
     emailError.textContent = '';
     senhaError.textContent = '';
+    nomeError.textContent = '';
 
     const email = emailInput.value.trim();
     if (!validateEmail(email)) {
@@ -35,5 +37,8 @@ if (email === 'teste@teste.com' && senha === '123456') {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
+
+const nome = nomeInput.value.trim();
+
 
 });
