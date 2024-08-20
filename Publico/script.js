@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const senhaError = document.getElementById('senhaError');
     const nomeInput = document.getElementById('nome');
     const nomeError = document.getElementById('nomeError');
-    const telefoneInput = document.getElementById('phone');
+    const telefoneInput = document.getElementById('telefone');
     const telefoneError = document.getElementById('telefoneError');
 
     form.addEventListener('submit', function(event){
