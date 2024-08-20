@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const form = document.getElementById('loginForm');
     const emailInput = document.getElementById('email');
     const senhaInput = document.getElementById('senha');
+    const confirmarSenhaInput = document.getElementById('Rsenha')
     const emailError = document.getElementById('emailError');
     const senhaError = document.getElementById('senhaError');
     const nomeInput = document.getElementById('nome');
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function(){
     nomeError.textContent = '';
     telefoneError.textContent = '';
     cpfError.textContent = '';
+    confirmarSenhaError.textContent = '';
 
     //validação do email
     const email = emailInput.value.trim();
@@ -38,8 +40,11 @@ function validateEmail(email) {
     senhaError.textContent = 'A senha deve ter pelo menos 6 caracteres.';
     return;
 }
-
-
+    const confirmarSenha = confirmarSenhaInput.value.trim();
+    if (senha !== confirmarSenha) {
+        confirmarSenhaError.textContent = 'As senhas não coincidem.';
+        return;
+    }
 //validar nome
 const nome = nomeInput.value.trim();
 if (nome.length < 5) {
