@@ -49,7 +49,8 @@ const telefone = telefoneInput.value.trim();
       return;
 }
 function validatePhone(phone) {
-    const regex =/^\d{10,11}$/;
+    phone = phone.replace(/\D/g, '');
+    const regex = /^\d{10,11}$/;
     return regex.test(phone);
 }
 });
