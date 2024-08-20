@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Ingressos - Festival de Cinema Independente</title>
+</head>
+<body>
+
+    <h2>Compra de Ingressos</h2>
+    <form action="#" method="post">
+        <div>
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <br>
+        <div>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+        </div>
+        <br>
+        <div>
+            <label for="quantidade">Quantidade de Ingressos:</label>
+            <select id="quantidade" name="quantidade" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="pagamento">Método de Pagamento:</label>
+            <select id="pagamento" name="pagamento" required>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="boleto">Boleto Bancário</option>
+                <option value="pix">PIX</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Comprar Ingressos">
+        </div>
+    </form>
+
+</body>
+</html>
