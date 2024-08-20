@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function(){
     emailError.textContent = '';
     senhaError.textContent = '';
     nomeError.textContent = '';
+    telefoneError.textContent = '';
 
     //validação do email
     const email = emailInput.value.trim();
@@ -27,24 +28,33 @@ function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
+//validar senha
     const senha = senhaInput.value.trim();
     if (senha.length < 6) {
     senhaError.textContent = 'A senha deve ter pelo menos 6 caracteres.';
     return;
 }
+//teste para logar
 if (email === 'teste@teste.com' && senha === '123456') {
     setTimeout(() => {
         alert('login bem-sucedido... seja bem-vindo!')
+        form.reset();
         window.location.href = 'home.html';
     }, 1000);
 }else{
     senhaError.textContent = 'Email ou senha inválidos.';
 }
 });
+//validar nome
 const nome = nomeInput.value.trim();
 if (nome.length < 5) {
     nomeError.textContent = 'O nome deve ter pelo menos 5 caracteres.';
     return;
+}
+// Valida telefone
+ if (!validatePhone(telefone)) {
+      telefoneError.textContent = 'Por favor, insira um número de telefone válido.';
+      return;
 }
 
 });
