@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const emailError = document.getElementById('emailError');
     const senhaError = document.getElementById('senhaError');
 
-form.addEventListener('submit', function(event){
+    form.addEventListener('submit', function(event){
     event.preventDefault();
     
     emailError.textContent = '';
