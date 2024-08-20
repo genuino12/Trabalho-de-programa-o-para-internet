@@ -10,7 +10,8 @@ body {
 }
 .container {
     display: flex;
-    flex-direction: column; /* Alinha o header e main verticalmente */
+    flex-direction: column;
+    border: 2px solid #007BFF;
 }
 
 header {
