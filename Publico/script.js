@@ -52,16 +52,10 @@ if (nome.length < 5) {
     return;
 }
 // Valida telefone
-const telefone = telefoneInput.value.trim();
- if (!validatePhone(telefone)) {
-      telefoneError.textContent = 'Por favor, insira um número de telefone válido.';
-      return;
-}
-function validatePhone(phone) {
-    phone = phone.replace(/\D/g, '');
-    const regex = /^\d{10,11}$/;
-    return regex.test(phone);
-}
+telefoneInput.addEventListener('input', function() {
+    telefoneInput.value = telefoneInput.value.replace(/\D/g, '');
+});
+
 //validar cpf
 const cpf = cpfInput.value.trim();
 cpfInput.addEventListener('input', function() {
