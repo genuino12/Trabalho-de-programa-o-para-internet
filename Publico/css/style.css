@@ -174,7 +174,7 @@ button:hover {
 @media (max-width: 320px) {
     .square-container {
         width: 90%;
-        height: auto; /* Ajusta a altura conforme necessário */
+        height: auto; 
         padding: 20px;
     }
 
@@ -185,18 +185,18 @@ button:hover {
 
 .square-container {
     display: flex;
-    flex-direction: column; /* Organiza os elementos em coluna */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 300px;
-    padding: 20px; /* Adiciona padding para garantir espaço interno */
-    background: linear-gradient(135deg, #ffffff, #f1f8e9); /* Gradiente de cor de fundo */
-    border-radius: 15px; /* Bordas arredondadas mais suaves */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+    padding: 20px;
+    background: linear-gradient(135deg, #ffffff, #f1f8e9);
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 .auth-links {
     display: flex;
-    gap: 10px; /* Espaçamento entre os botões */
+    gap: 10px; 
 }
 
 .auth-links .btn {
@@ -235,5 +235,23 @@ button:hover {
 #ticket-quantity {
     width: 60px;
 }
+.form-group {
+    margin-bottom: 15px;
+}
 
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 
