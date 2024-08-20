@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const confirmarSenhaInput = document.getElementById('Rsenha')
     const emailError = document.getElementById('emailError');
     const senhaError = document.getElementById('senhaError');
-    const nome = document.getElementById('nome');
+    const nomeInput = document.getElementById('nome');
     const nomeError = document.getElementById('nomeError');
     const telefoneInput = document.getElementById('telefone');
     const telefoneError = document.getElementById('telefoneError');
@@ -46,19 +46,23 @@ function validateEmail(email) {
         return;
     }
 //validar nome
-if (typeof nome !== 'string') {
-    alert("Campo 'nome' não encontrado ou não é uma string.");
+if (!nomeInput) {
+    alert("Campo 'nome' não encontrado.");
     return false;
 }
+
+const nome = nomeInput.value; 
+
 
 if (nome.trim() === "") {
     alert("O campo nome não pode estar vazio.");
     return false;
 }
 
+
 const regexNome = /^[a-zA-Zà-úÀ-Ú\s'-]+$/;
 if (!regexNome.test(nome)) {
-    alert("Nome inválido! Insira apenas letras.");
+    alert("Nome inválido! Insira apenas letras e espaços.");
     return false;
 }
 
