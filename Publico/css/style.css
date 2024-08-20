@@ -8,12 +8,6 @@ body {
     margin: 0;
    
 }
-.container {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid; 
-}
-
 header {
     background-color: #007bff; 
     color: white; 
