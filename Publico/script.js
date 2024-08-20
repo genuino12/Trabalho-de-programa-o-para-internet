@@ -46,7 +46,12 @@ function validateEmail(email) {
         return;
     }
 //validar nome
-if (nome.trim.() === "") {
+if (typeof nome !== 'string') {
+    alert("Campo 'nome' não encontrado ou não é uma string.");
+    return false;
+}
+
+if (nome.trim() === "") {
     alert("O campo nome não pode estar vazio.");
     return false;
 }
