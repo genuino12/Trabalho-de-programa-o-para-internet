@@ -26,7 +26,10 @@ form.addEventListener('submit', function(event){
         alert('login bem-sucedido... seja bem-vindo!')
         window.location.href = 'home.html';
     }, 1000);
-
 });
+    function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
 
 });
