@@ -57,7 +57,7 @@ if (nome.length < 5) {
       return;
 }
 function validatePhone(phone) {
-    const regex = /^(\(\d{2}\)\s?)?\d{5}-\d{4}$/;
+    const regex =/^\d{10,11}$/;
     return regex.test(phone);
 }
 
