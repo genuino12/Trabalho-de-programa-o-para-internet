@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="script.js"></script> 
+    <script src="script.js" defer></script> 
 </head>
 <body>
     <div class="square-container">
@@ -27,14 +27,16 @@
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
+                <span id="emailError" class="error-message"></span>
             </div>
             <div class="form-group">
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
+                <input type="password" id="senha" name="senha" required maxlength="6">
+                <span id="senhaError" class="error-message"></span>
             </div>
             <div class="form-group">
-                <label for="senha">Repitir Senha:</label>
-                <input type="password" id="senha" name="senha" required>
+                <label for="Rsenha">Repitir Senha:</label>
+                <input type="password" id="Rsenha" name="Rsenha" required maxlength="6">
             </div>
             <button type="submit">Cadastrar</button>
         </form>
