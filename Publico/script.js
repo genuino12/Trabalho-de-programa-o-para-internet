@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function(){
     senhaError.textContent = '';
     nomeError.textContent = '';
     telefoneError.textContent = '';
+    cpfError.textContent = '';
 
     //validação do email
     const email = emailInput.value.trim();
@@ -55,5 +56,33 @@ function validatePhone(phone) {
     const regex = /^\d{10,11}$/;
     return regex.test(phone);
 }
+const cpf = cpfInput.value.trim();
+if (!validateCPF(cpf)) {
+    cpfError.textContent = 'Por favor, insira um CPF válido.';
+    return;
+}
+function validateCPF(cpf) {
+    cpf = cpf.replace(/\D/g, ''); // Remove caracteres não numéricos
+
+    if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
+        return false; // Verifica se o CPF tem 11 dígitos e não é uma sequência repetitiva
+    }
+
+    // Função para calcular o dígito verificador
+    function calcularDigito(cpf, peso) {
+        let soma = 0;
+        for (let i = 0; i < cpf.length; i++) {
+            soma += cpf.charAt(i) * peso--;
+        }
+        let resto = (soma % 11);
+        return (resto < 2) ? 0 : 11 - resto;
+    }
+
+    const digito1 = calcularDigito(cpf.substring(0, 9), 10);
+    const digito2 = calcularDigito(cpf.substring(0, 10), 11);
+
+    return cpf.charAt(9) == digito1 && cpf.charAt(10) == digito2;
+}
+
 });
 });
