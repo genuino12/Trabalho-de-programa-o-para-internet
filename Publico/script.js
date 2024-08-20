@@ -6,6 +6,27 @@ document.addEventListener('DOMContentLoaded', function(){
     const emailError = document.getElementById('emailError');
     const senhaError = document.getElementById('senhaError');
 
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    
+    emailError.textContent = '';
+    senhaError.textContent = '';
 
+    const email = emailInput.value.trim();
+    if (!validateEmail(email)) {
+        emailError.textContent = 'Por favor, insira um e-mail válido.';
+        return;
+}
+    const senha = senhaInput.value.trim();
+    if (senha.length < 6) {
+    senhaError.textContent = 'A senha deve ter pelo menos 6 caracteres.';
+    return;
+}
+    setTimeout(() => {
+        alert('login bem-sucedido... seja bem-vindo!')
+        window.location.href = 'home.html';
+    }, 1000);
 
-})
+});
+
+});
