@@ -40,5 +40,4 @@ if (email === 'teste@teste.com' && senha === '123456') {
     senhaError.textContent = 'Email ou senha inválidos.';
 }
 });
-
 });
