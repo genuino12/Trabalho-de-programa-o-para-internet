@@ -48,9 +48,9 @@ const telefone = telefoneInput.value.trim();
       telefoneError.textContent = 'Por favor, insira um número de telefone válido.';
       return;
 }
-function validatePhone(telefone) {
+function validatePhone(phone) {
     const regex =/^\d{10,11}$/;
-    return regex.test(telefone);
+    return regex.test(phone);
 }
 });
 });
