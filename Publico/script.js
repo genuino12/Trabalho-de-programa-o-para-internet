@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', function(){
     const nomeError = document.getElementById('nomeError');
     const telefoneInput = document.getElementById('telefone');
     const telefoneError = document.getElementById('telefoneError');
+    const cpfInput = document.getElementById('cpf');
+    const cpfError = document.getElementById('cpfError');
 
     form.addEventListener('submit', function(event){
     event.preventDefault();
