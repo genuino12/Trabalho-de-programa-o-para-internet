@@ -67,7 +67,7 @@ function formatCPF(cpf) {
    
     cpf = cpf.replace(/\D/g, '');
 
-    // Adiciona a formatação do CPF (XXX.XXX.XXX-XX)
+   
     if (cpf.length <= 3) {
         return cpf;
     }
@@ -81,13 +81,13 @@ function formatCPF(cpf) {
 }
 
 function validateCPF(cpf) {
-    cpf = cpf.replace(/\D/g, ''); // Remove caracteres não numéricos
+    cpf = cpf.replace(/\D/g, ''); 
 
     if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
-        return false; // Verifica se o CPF tem 11 dígitos e não é uma sequência repetitiva
+        return false;
     }
 
-    // Função para calcular o dígito verificador
+   
     function calcularDigito(cpf, peso) {
         let soma = 0;
         for (let i = 0; i < cpf.length; i++) {
