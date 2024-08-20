@@ -22,10 +22,14 @@ document.addEventListener('DOMContentLoaded', function(){
     senhaError.textContent = 'A senha deve ter pelo menos 6 caracteres.';
     return;
 }
+if (email === 'teste@teste.com' && senha === '123456') {
     setTimeout(() => {
         alert('login bem-sucedido... seja bem-vindo!')
         window.location.href = 'home.html';
     }, 1000);
+}else{
+    senhaError.textContent = 'Email ou senha inválidos.';
+}
 });
     function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
