@@ -52,7 +52,7 @@ if (nome.length < 5) {
     return;
 }
 // Valida telefone
- if (!validatePhone(telefone)) {
+ if (!validatePhone(phone)) {
       telefoneError.textContent = 'Por favor, insira um número de telefone válido.';
       return;
 }
