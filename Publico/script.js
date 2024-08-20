@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const confirmarSenhaInput = document.getElementById('Rsenha')
     const emailError = document.getElementById('emailError');
     const senhaError = document.getElementById('senhaError');
-    const nomeInput = document.getElementById('nome').;
+    const nome = document.getElementById('nome');
     const nomeError = document.getElementById('nomeError');
     const telefoneInput = document.getElementById('telefone');
     const telefoneError = document.getElementById('telefoneError');
@@ -46,11 +46,17 @@ function validateEmail(email) {
         return;
     }
 //validar nome
-var regexNome = /^[a-zA-Zà-úÀ-Ú\s]+$/;
+if (nome.trim() === "") {
+    alert("O campo nome não pode estar vazio.");
+    return false;
+}
+
+const regexNome = /^[a-zA-Zà-úÀ-Ú\s'-]+$/;
 if (!regexNome.test(nome)) {
     alert("Nome inválido! Insira apenas letras.");
     return false;
 }
+
 // Valida telefone
 telefoneInput.addEventListener('input', function() {
     telefoneInput.value = telefoneInput.value.replace(/\D/g, '');
