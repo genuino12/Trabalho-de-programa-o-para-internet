@@ -56,5 +56,9 @@ if (nome.length < 5) {
       telefoneError.textContent = 'Por favor, insira um número de telefone válido.';
       return;
 }
+function validatePhone(phone) {
+    const regex = /^(\(\d{2}\)\s?)?\d{5}-\d{4}$/;
+    return regex.test(phone);
+}
 
 });
