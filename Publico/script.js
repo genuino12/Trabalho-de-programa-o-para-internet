@@ -80,14 +80,15 @@ function formatCPF(cpf) {
     return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, '$1.$2.$3-$4');
 }
 
-function validateCPF(cpf) {
+function validatecpf(cpf) {
     cpf = cpf.replace(/\D/g, ''); 
 
+   
     if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
         return false;
     }
 
-   
+    
     function calcularDigito(cpf, peso) {
         let soma = 0;
         for (let i = 0; i < cpf.length; i++) {
@@ -97,11 +98,12 @@ function validateCPF(cpf) {
         return (resto < 2) ? 0 : 11 - resto;
     }
 
+    
     const digito1 = calcularDigito(cpf.substring(0, 9), 10);
     const digito2 = calcularDigito(cpf.substring(0, 10), 11);
-
     return cpf.charAt(9) == digito1 && cpf.charAt(10) == digito2;
 }
+
 
 
 });
