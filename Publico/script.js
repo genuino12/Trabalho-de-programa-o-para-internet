@@ -46,7 +46,7 @@ function validateEmail(email) {
         return;
     }
 //validar nome
-if (nome.trim() === "") {
+if (nome.trim.() === "") {
     alert("O campo nome não pode estar vazio.");
     return false;
 }
