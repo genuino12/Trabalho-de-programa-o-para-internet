@@ -34,17 +34,8 @@ function validateEmail(email) {
     senhaError.textContent = 'A senha deve ter pelo menos 6 caracteres.';
     return;
 }
-//teste para logar
-if (email === 'teste@teste.com' && senha === '123456') {
-    setTimeout(() => {
-        alert('login bem-sucedido... seja bem-vindo!')
-        form.reset();
-        window.location.href = 'home.html';
-    }, 1000);
-}else{
-    senhaError.textContent = 'Email ou senha inválidos.';
-}
-});
+
+
 //validar nome
 const nome = nomeInput.value.trim();
 if (nome.length < 5) {
@@ -61,5 +52,5 @@ function validatePhone(telefone) {
     const regex =/^\d{10,11}$/;
     return regex.test(telefone);
 }
-
+});
 });
