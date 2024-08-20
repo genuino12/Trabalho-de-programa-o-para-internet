@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
     const telefoneError = document.getElementById('telefoneError');
     const cpfInput = document.getElementById('cpf');
     const cpfError = document.getElementById('cpfError');
+    const confirmarSenhaError = document.getElementById('confirmarSenhaError');
 
     form.addEventListener('submit', function(event){
     event.preventDefault();
@@ -56,11 +57,29 @@ function validatePhone(phone) {
     const regex = /^\d{10,11}$/;
     return regex.test(phone);
 }
+//validar cpf
 const cpf = cpfInput.value.trim();
-if (!validateCPF(cpf)) {
-    cpfError.textContent = 'Por favor, insira um CPF válido.';
-    return;
+cpfInput.addEventListener('input', function() {
+    const formattedCPF = formatCPF(cpfInput.value);
+    cpfInput.value = formattedCPF;  
+});
+function formatCPF(cpf) {
+   
+    cpf = cpf.replace(/\D/g, '');
+
+    // Adiciona a formatação do CPF (XXX.XXX.XXX-XX)
+    if (cpf.length <= 3) {
+        return cpf;
+    }
+    if (cpf.length <= 6) {
+        return cpf.replace(/(\d{3})(\d{0,3})/, '$1.$2');
+    }
+    if (cpf.length <= 9) {
+        return cpf.replace(/(\d{3})(\d{3})(\d{0,3})/, '$1.$2.$3');
+    }
+    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, '$1.$2.$3-$4');
 }
+
 function validateCPF(cpf) {
     cpf = cpf.replace(/\D/g, ''); // Remove caracteres não numéricos
 
@@ -83,6 +102,7 @@ function validateCPF(cpf) {
 
     return cpf.charAt(9) == digito1 && cpf.charAt(10) == digito2;
 }
+
 
 });
 });
