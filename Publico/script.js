@@ -75,44 +75,38 @@ if (!regexTelefone.test(telefone)) {
 }
 //validar cpf
 const cpf = cpfInput.value.trim();
-cpfInput.addEventListener('input', function() {
-    const formattedCPF = formatCPF(cpfInput.value);
-    cpfInput.value = formattedCPF;  
-});
-function formatCPF(cpf) {
-   
-    cpf = cpf.replace(/\D/g, '');
-    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-
-}
 function validarCPF(cpf) {
-    cpf = cpf.replace(/[^\d]/g, ''); 
+    cpf = cpf.replace(/[^\d]/g, ''); // Remove caracteres não numéricos
     
+    // Verifica se o CPF tem 11 dígitos e não é uma sequência repetitiva
     if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
-        return false; 
+        return false;
     }
+
     let soma = 0;
     let resto;
 
+    // Validação do primeiro dígito verificador
     for (let i = 0; i < 9; i++) {
         soma += parseInt(cpf.charAt(i)) * (10 - i);
     }
     resto = (soma * 10) % 11;
     if (resto === 10 || resto === 11) resto = 0;
     if (resto !== parseInt(cpf.charAt(9))) return false;
-    
+
     soma = 0;
-  
+    // Validação do segundo dígito verificador
     for (let i = 0; i < 10; i++) {
         soma += parseInt(cpf.charAt(i)) * (11 - i);
     }
     resto = (soma * 10) % 11;
     if (resto === 10 || resto === 11) resto = 0;
     if (resto !== parseInt(cpf.charAt(10))) return false;
-    
-    return true;
 
+    return true;
 }
+
+
 
 
  // Simula o cadastro bem-sucedido
