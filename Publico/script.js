@@ -68,12 +68,11 @@ if (!regexNome.test(nome)) {
 
 // Valida telefone
 const telefone = telefoneInput.value; 
-const regexTelefone = /^[0-9\s\(\)\-\+\.]+$/;
+const regexTelefone = /^\(\d{2}\)\d{5}-\d{4}$/;
 if (!regexTelefone.test(telefone)) {
-    alert("Telefone inválido! Insira apenas números e caracteres válidos.");
+    alert("Telefone inválido! Use o formato (xx)xxxxx-xxxx.");
     return false;
 }
-
 //validar cpf
 const cpf = cpfInput.value.trim();
 cpfInput.addEventListener('input', function() {
@@ -83,43 +82,39 @@ cpfInput.addEventListener('input', function() {
 function formatCPF(cpf) {
    
     cpf = cpf.replace(/\D/g, '');
+    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
 
-   
-    if (cpf.length <= 3) {
-        return cpf;
+}
+function validarCPF(cpf) {
+    cpf = cpf.replace(/[^\d]/g, ''); 
+    
+    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
+        return false; 
     }
-    if (cpf.length <= 6) {
-        return cpf.replace(/(\d{3})(\d{0,3})/, '$1.$2');
+    let soma = 0;
+    let resto;
+
+    for (let i = 0; i < 9; i++) {
+        soma += parseInt(cpf.charAt(i)) * (10 - i);
     }
-    if (cpf.length <= 9) {
-        return cpf.replace(/(\d{3})(\d{3})(\d{0,3})/, '$1.$2.$3');
+    resto = (soma * 10) % 11;
+    if (resto === 10 || resto === 11) resto = 0;
+    if (resto !== parseInt(cpf.charAt(9))) return false;
+    
+    soma = 0;
+  
+    for (let i = 0; i < 10; i++) {
+        soma += parseInt(cpf.charAt(i)) * (11 - i);
     }
-    return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{0,2})/, '$1.$2.$3-$4');
+    resto = (soma * 10) % 11;
+    if (resto === 10 || resto === 11) resto = 0;
+    if (resto !== parseInt(cpf.charAt(10))) return false;
+    
+    return true;
+
 }
 
-function validatecpf(cpf) {
-    cpf = cpf.replace(/\D/g, ''); 
 
-   
-    if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
-        return false;
-    }
-
-    
-    function calcularDigito(cpf, peso) {
-        let soma = 0;
-        for (let i = 0; i < cpf.length; i++) {
-            soma += cpf.charAt(i) * peso--;
-        }
-        let resto = (soma % 11);
-        return (resto < 2) ? 0 : 11 - resto;
-    }
-
-    
-    const digito1 = calcularDigito(cpf.substring(0, 9), 10);
-    const digito2 = calcularDigito(cpf.substring(0, 10), 11);
-    return cpf.charAt(9) == digito1 && cpf.charAt(10) == digito2;
-}
  // Simula o cadastro bem-sucedido
  setTimeout(() => {
     alert('Cadastro realizado com sucesso!');
