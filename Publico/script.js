@@ -129,4 +129,18 @@ if (cpfMensagem) {
     window.location.href = 'login.html';
 }, 1000); 
 });
+// Função para calcular o valor total
+function calculateTotal() {
+    const ticketQuantity = document.getElementById('ticketQuantity').value;
+    const ticketPrice = document.getElementById('ticketPrice').textContent;
+    const totalPrice = ticketQuantity * ticketPrice;
+    document.getElementById('totalPrice').textContent = totalPrice;
+}
+
+// Adiciona um evento ao input para recalcular o valor total quando a quantidade mudar
+document.getElementById('ticketQuantity').addEventListener('input', calculateTotal);
+
+// Inicializa o cálculo do valor total
+calculateTotal();
+
 });
