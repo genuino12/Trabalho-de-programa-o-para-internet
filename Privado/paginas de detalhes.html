@@ -15,9 +15,8 @@
     </header>
 
     <main class="main">
-        <section id="event-details">
-            <h2 id="event-name">Show do Artista X</h2>
-
+        <section id="event-1" class="event-details">
+            <h2>Show do Artista X</h2>
             <div class="event-info">
                 <div>
                     <p><strong>Descrição:</strong> Este é um evento imperdível com uma performance espetacular!</p>
@@ -25,17 +24,14 @@
                 </div>
                 <div>
                     <p><strong>Local:</strong>Teatro ABC, AV: Principal 123</p>
-                    <p><strong>Preço:</strong> R$ 150,00</p>
+                    <p><strong>Preço:</strong> R$ <span class="ticket-price">150.00</span></p>
                     <p><strong>Ingressos Disponíveis:</strong> 200</p>
                 </div>
             </div>
-
-            <label for="ticket-quantity">Quantidade de Ingressos:</label>
-            <input type="number" id="ticket-quantity" min="1" max="200" value="1">
-
-            <p id="total-price">Valor Total: R$ 00,00</p>
-
-            <button id="purchase-button">Comprar</button>
+            <label for="ticket-quantity-1">Quantidade de Ingressos:</label>
+            <input type="number" id="ticket-quantity-1" class="ticket-quantity" min="1" max="200" value="1">
+            <p id="total-price-1">Valor Total: R$ <span class="total-price">150.00</span></p>
+            <button id="purchase-button-1">Comprar</button>
         </section>
         <section id="event-details">
             <h2 id="event-name">Evento de Ciclismo</h2>

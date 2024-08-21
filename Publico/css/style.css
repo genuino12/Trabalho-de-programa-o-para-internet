@@ -68,7 +68,7 @@ main {
     font-size: 1.5rem;
     color: #333;
 }
-#event-details {
+.event-details {
     max-width: 600px;
     width: 100%; 
     padding: 1em;
