@@ -42,33 +42,32 @@
             <p id="purchase-message-1" class="purchase-message"></p>
         </section>
         
-        <section id="event-details" id="event-1">
-            <h2 id="event-name">Evento de Ciclismo</h2>
-
+        <section id="event-2" class="event-details">
+            <h2>Evento de Ciclismo</h2>
             <div class="event-info">
                 <div>
-                    <p><strong>Descrição:</strong> Participe da emocionante competição de ciclismo "Pedal dos Campeões"! Uma corrida vibrante e desafiadora pelas trilhas mais bonitas da cidade, com prêmios para os melhores ciclistas. Prepare sua bicicleta e junte-se a nós para um dia de adrenalina e diversão!</p>
+                    <p><strong>Descrição:</strong> Participe da emocionante competição de ciclismo "Pedal dos Campeões"!</p>
                     <p><strong>Data e Hora:</strong> 30 de Agosto de 2024, 8:00</p>
                 </div>
                 <div>
                     <p><strong>Local:</strong> Parque Central, Rua das Flores, 123</p>
-                    <p><strong>Preço:</strong> R$ 30,00</p>
+                    <p><strong>Preço:</strong> R$ <span class="ticket-price">30.00</span></p>
                     <p><strong>Ingressos Disponíveis:</strong> 100</p>
                 </div>
             </div>
-
-            <label for="ticket-quantity">Quantidade de Ingressos:</label>
-            <input type="number" id="ticket-quantity" min="1" max="100" value="1">
-            <p>Valor Total: R$ <input type="text" id="total-price-1" class="total-price" value="30.00" readonly></p>
-            <label for="payment-method">Forma de Pagamento:</label>
-            <select id="payment-method">
+            <label for="ticket-quantity-2">Quantidade de Ingressos:</label>
+            <input type="number" id="ticket-quantity-2" class="ticket-quantity" min="1" max="100" value="1">
+            <p>Valor Total: R$ <span class="total-price">00,00</span></p>
+            <label for="payment-method-2">Forma de Pagamento:</label>
+            <select id="payment-method-2" class="payment-method">
                 <option value="registered-card">Cartão Final 1234</option>
                 <option value="registered-card-2">Cartão Final 5678</option>
                 <option value="other">Outro Método</option>
             </select>
-        <br> <br>
-            <button id="purchase-button">Comprar</button>
-            <p id="purchase-message-1" class="purchase-message"></p>
+            <button class="purchase-button">Comprar</button>
+            <p class="purchase-message"></p>
+            <br> <br>
+
         </section>
 
         <section id="event-details">
