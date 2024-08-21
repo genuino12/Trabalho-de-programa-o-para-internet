@@ -10,7 +10,7 @@
     <header class="header">
         <h1>Detalhes do Evento</h1>
         <div class="auth-links">
-        <a href="home.html" class="btn login-btn">Voltar</a>
+            <a href="home.html" class="btn login-btn">Voltar</a>
         </div>
     </header>
 
@@ -23,7 +23,7 @@
                     <p><strong>Data e Hora:</strong> 25 de Agosto de 2024, 20:00</p>
                 </div>
                 <div>
-                    <p><strong>Local:</strong>Teatro ABC, AV: Principal 123</p>
+                    <p><strong>Local:</strong> Teatro ABC, AV: Principal 123</p>
                     <p><strong>Preço:</strong> R$ <span class="ticket-price">150.00</span></p>
                     <p><strong>Ingressos Disponíveis:</strong> 200</p>
                 </div>
@@ -31,17 +31,17 @@
             <label for="ticket-quantity-1">Quantidade de Ingressos:</label>
             <input type="number" id="ticket-quantity-1" class="ticket-quantity" min="1" max="200" value="1">
             <p>Valor Total: R$ <input type="text" id="total-price-1" class="total-price" value="150.00" readonly></p>
-            <label for="payment-method">Forma de Pagamento:</label>
-            <select id="payment-method">
+            <label for="payment-method-1">Forma de Pagamento:</label>
+            <select id="payment-method-1" class="payment-method">
                 <option value="registered-card">Cartão Final 1234</option>
                 <option value="registered-card-2">Cartão Final 5678</option>
                 <option value="other">Outro Método</option>
             </select>
-        <br> <br>
-            <button id="purchase-button-1">Comprar</button>
+            <br> <br>
+            <button class="purchase-button">Comprar</button>
             <p id="purchase-message-1" class="purchase-message"></p>
         </section>
-        
+
         <section id="event-2" class="event-details">
             <h2>Evento de Ciclismo</h2>
             <div class="event-info">
@@ -57,7 +57,7 @@
             </div>
             <label for="ticket-quantity-2">Quantidade de Ingressos:</label>
             <input type="number" id="ticket-quantity-2" class="ticket-quantity" min="1" max="100" value="1">
-            <p>Valor Total: R$ <span class="total-price">30,00</span></p>
+            <p>Valor Total: R$ <input type="text" id="total-price-1" class="total-price" value="30.00" readonly></p>
             <label for="payment-method-2">Forma de Pagamento:</label>
             <select id="payment-method-2" class="payment-method">
                 <option value="registered-card">Cartão Final 1234</option>
@@ -66,103 +66,117 @@
             </select>
             <br> <br>
             <button class="purchase-button">Comprar</button>
-            <p class="purchase-message"></p>
+            <p id="purchase-message-1" class="purchase-message"></p>
         </section>
 
-        <section id="event-details">
-            <h2 id="event-name">Partida de Futebol</h2>
-
+        <section id="event-3" class="event-details">
+            <h2>Partida de Futebol</h2>
             <div class="event-info">
                 <div>
-                    <p><strong>Descrição:</strong>Não perca o confronto eletrizante entre as equipes “time A” e “Time B”! Uma partida repleta de ação e emoção, com jogadas espetaculares e momentos de grande intensidade. Venha torcer e vivenciar a paixão pelo futebol ao máximo!
-
-                        </p>
+                    <p><strong>Descrição:</strong> Não perca o confronto eletrizante entre as equipes “time A” e “Time B”!</p>
                     <p><strong>Data e Hora:</strong> 21 de Agosto de 2024, 16:00</p>
                 </div>
                 <div>
-                    <p><strong>Local:</strong> Estadio Principal Rua Manoel Futebolista, 323</p>
-                    <p><strong>Preço:</strong> R$ 50,00</p>
+                    <p><strong>Local:</strong> Estádio Principal Rua Manoel Futebolista, 323</p>
+                    <p><strong>Preço:</strong> R$ <span class="ticket-price">50.00</span></p>
                     <p><strong>Ingressos Disponíveis:</strong> 1000</p>
                 </div>
             </div>
-
-            <label for="ticket-quantity">Quantidade de Ingressos:</label>
-            <input type="number" id="ticket-quantity" min="1" max="1000" value="1">
-
-            <p id="total-price">Valor Total: R$ 00,00</p>
-
-            <button id="purchase-button">Comprar</button>
+            <label for="ticket-quantity-3">Quantidade de Ingressos:</label>
+            <input type="number" id="ticket-quantity-3" class="ticket-quantity" min="1" max="1000" value="1">
+            <p>Valor Total: R$ <input type="text" id="total-price-1" class="total-price" value="150.00" readonly></p>
+            <label for="payment-method-3">Forma de Pagamento:</label>
+            <select id="payment-method-3" class="payment-method">
+                <option value="registered-card">Cartão Final 1234</option>
+                <option value="registered-card-2">Cartão Final 5678</option>
+                <option value="other">Outro Método</option>
+            </select>
+            <br> <br>
+            <button class="purchase-button">Comprar</button>
+            <p id="purchase-message-1" class="purchase-message"></p>
         </section>
 
-        <section id="event-details">
-            <h2 id="event-name">Evento de Programação</h2>
-
+        <section id="event-4" class="event-details">
+            <h2>Evento de Programação</h2>
             <div class="event-info">
                 <div>
-                    <p><strong>Descrição:</strong>Um evento de programação é um encontro onde desenvolvedores e entusiastas de tecnologia se reúnem para aprender, compartilhar conhecimentos e colaborar em projetos!</p>
+                    <p><strong>Descrição:</strong> Um evento de programação para desenvolvedores e entusiastas de tecnologia!</p>
                     <p><strong>Data e Hora:</strong> 01 de Setembro 2024, 14:00</p>
                 </div>
                 <div>
-                    <p><strong>Local:</strong> Escola X, Rua, tecnologia, 1223</p>
-                    <p><strong>Preço:</strong> R$ 80,00</p>
+                    <p><strong>Local:</strong> Escola X, Rua Tecnologia, 1223</p>
+                    <p><strong>Preço:</strong> R$ <span class="ticket-price">80.00</span></p>
                     <p><strong>Ingressos Disponíveis:</strong> 1000</p>
                 </div>
             </div>
-
-            <label for="ticket-quantity">Quantidade de Ingressos:</label>
-            <input type="number" id="ticket-quantity" min="1" max="1000" value="1">
-
-            <p id="total-price">Valor Total: R$ 00,00</p>
-
-            <button id="purchase-button">Comprar</button>
+            <label for="ticket-quantity-4">Quantidade de Ingressos:</label>
+            <input type="number" id="ticket-quantity-4" class="ticket-quantity" min="1" max="1000" value="1">
+            <p>Valor Total: R$ <input type="text" id="total-price-1" class="total-price" value="150.00" readonly></p>
+            <label for="payment-method-4">Forma de Pagamento:</label>
+            <select id="payment-method-4" class="payment-method">
+                <option value="registered-card">Cartão Final 1234</option>
+                <option value="registered-card-2">Cartão Final 5678</option>
+                <option value="other">Outro Método</option>
+            </select>
+            <br> <br>
+            <button class="purchase-button">Comprar</button>
+            <p id="purchase-message-1" class="purchase-message"></p>
         </section>
 
-        <section id="event-details">
-            <h2 id="event-name">Workshop de Fotografia</h2>
-
+        <section id="event-5" class="event-details">
+            <h2>Workshop de Fotografia</h2>
             <div class="event-info">
                 <div>
-                    <p><strong>Descrição:</strong> Um workshop de fotografia é uma oportunidade prática para aprender e aprimorar técnicas fotográficas, seja para iniciantes ou fotógrafos experientes. Durante o evento, os participantes recebem instruções de profissionais, exploram conceitos como composição, iluminação e edição, e têm a chance de aplicar o conhecimento em exercícios práticos!</p>
+                    <p><strong>Descrição:</strong> Um workshop para aprender e aprimorar técnicas fotográficas!</p>
                     <p><strong>Data e Hora:</strong> 12 de Outubro, 2024, 15:00</p>
                 </div>
                 <div>
-                    <p><strong>Local:</strong> Centro Cultural Y, Rua da iluminação, 982</p>
-                    <p><strong>Preço:</strong> R$ 100,00</p>
+                    <p><strong>Local:</strong> Centro Cultural Y, Rua da Iluminação, 982</p>
+                    <p><strong>Preço:</strong> R$ <span class="ticket-price">100.00</span></p>
                     <p><strong>Ingressos Disponíveis:</strong> 200</p>
                 </div>
             </div>
-
-            <label for="ticket-quantity">Quantidade de Ingressos:</label>
-            <input type="number" id="ticket-quantity" min="1" max="200" value="1">
-
-            <p id="total-price">Valor Total: R$ 00,00</p>
-
-            <button id="purchase-button">Comprar</button>
+            <label for="ticket-quantity-5">Quantidade de Ingressos:</label>
+            <input type="number" id="ticket-quantity-5" class="ticket-quantity" min="1" max="200" value="1">
+            <p>Valor Total: R$ <input type="text" id="total-price-1" class="total-price" value="150.00" readonly></p>
+            <label for="payment-method-5">Forma de Pagamento:</label>
+            <select id="payment-method-5" class="payment-method">
+                <option value="registered-card">Cartão Final 1234</option>
+                <option value="registered-card-2">Cartão Final 5678</option>
+                <option value="other">Outro Método</option>
+            </select>
+            <br> <br>
+            <button class="purchase-button">Comprar</button>
+            <p id="purchase-message-1" class="purchase-message"></p>
         </section>
 
-        <section id="event-details">
-            <h2 id="event-name">Festival de Cinema Independente</h2>
-
+        <section id="event-6" class="event-details">
+            <h2>Festival Gastronômico</h2>
             <div class="event-info">
                 <div>
-                    <p><strong>Descrição:</strong> O Festival de Cinema Independente é um evento dedicado à exibição e celebração de filmes criados fora do circuito comercial tradicional. Focado em produções que exploram narrativas originais e abordagens criativas, o festival oferece uma plataforma para cineastas emergentes e experientes mostrarem seu trabalho a um público diverso!</p>
-                    <p><strong>Data e Hora:</strong> 15 de Novembro, 2024, 19:00</p>
+                    <p><strong>Descrição:</strong> Venha degustar pratos de chefs renomados no Festival Gastronômico!</p>
+                    <p><strong>Data e Hora:</strong> 20 de Novembro de 2024, 12:00</p>
                 </div>
                 <div>
-                    <p><strong>Local:</strong> Cinema Z, AV, Principal 223</p>
-                    <p><strong>Preço:</strong> R$ 60,00</p>
-                    <p><strong>Ingressos Disponíveis:</strong> 200</p>
+                    <p><strong>Local:</strong> Praça da Gastronomia, Rua dos Sabores, 310</p>
+                    <p><strong>Preço:</strong> R$ <span class="ticket-price">60.00</span></p>
+                    <p><strong>Ingressos Disponíveis:</strong> 500</p>
                 </div>
             </div>
-
-            <label for="ticket-quantity">Quantidade de Ingressos:</label>
-            <input type="number" id="ticket-quantity" min="1" max="200" value="1">
-
-            <p id="total-price">Valor Total: R$ 00,00</p>
-
-            <button id="purchase-button">Comprar</button>
+            <label for="ticket-quantity-6">Quantidade de Ingressos:</label>
+            <input type="number" id="ticket-quantity-6" class="ticket-quantity" min="1" max="500" value="1">
+            <p>Valor Total: R$ <input type="text" id="total-price-1" class="total-price" value="150.00" readonly></p>
+            <label for="payment-method-6">Forma de Pagamento:</label>
+            <select id="payment-method-6" class="payment-method">
+                <option value="registered-card">Cartão Final 1234</option>
+                <option value="registered-card-2">Cartão Final 5678</option>
+                <option value="other">Outro Método</option>
+            </select>
+            <br> <br>
+            <button class="purchase-button">Comprar</button>
+            <p id="purchase-message-1" class="purchase-message"></p>
         </section>
     </main>
-    <script src="pagina-detalhes.js"></script> 
+    <script src="pagina-detalhes.js"></script>
 </body>
 </html>
