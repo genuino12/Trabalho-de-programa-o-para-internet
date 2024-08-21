@@ -34,6 +34,7 @@ function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
+
 //validar senha
     const senha = senhaInput.value.trim();
     if (senha.length < 6) {
