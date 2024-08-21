@@ -59,10 +59,16 @@
 
             <label for="ticket-quantity">Quantidade de Ingressos:</label>
             <input type="number" id="ticket-quantity" min="1" max="100" value="1">
-
-            <p id="total-price">Valor Total: R$ 00,00</p>
-
+            <p>Valor Total: R$ <input type="text" id="total-price-1" class="total-price" value="30.00" readonly></p>
+            <label for="payment-method">Forma de Pagamento:</label>
+            <select id="payment-method">
+                <option value="registered-card">Cartão Final 1234</option>
+                <option value="registered-card-2">Cartão Final 5678</option>
+                <option value="other">Outro Método</option>
+            </select>
+        <br> <br>
             <button id="purchase-button">Comprar</button>
+            <p id="purchase-message-1" class="purchase-message"></p>
         </section>
 
         <section id="event-details">
