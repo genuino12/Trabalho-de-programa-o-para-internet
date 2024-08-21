@@ -30,8 +30,9 @@
             </div>
             <label for="ticket-quantity-1">Quantidade de Ingressos:</label>
             <input type="number" id="ticket-quantity-1" class="ticket-quantity" min="1" max="200" value="1">
-            <p id="total-price-1">Valor Total: R$ <span class="total-price">150.00</span></p>
+            <p>Valor Total: R$ <input type="text" id="total-price-1" class="total-price" value="150.00" readonly></p>
             <button id="purchase-button-1">Comprar</button>
+            <p id="purchase-message-1" class="purchase-message"></p>
         </section>
         <section id="event-details">
             <h2 id="event-name">Evento de Ciclismo</h2>
