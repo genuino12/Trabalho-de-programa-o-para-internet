@@ -74,44 +74,45 @@ if (!regexTelefone.test(telefone)) {
     return false;
 }
 //validar cpf
-const cpf = cpfInput.value.trim();
-cpfInput.addEventListener('input', function() {
-    const formattedCPF = formatCPF(cpfInput.value);
-    cpfInput.value = formattedCPF;  
-});
-function formatCPF(cpf) {
-   
-    cpf = cpf.replace(/\D/g, '');
+function formatarCPF(cpf) {
+    cpf = cpf.replace(/[^\d]/g, ''); // Remove caracteres não numéricos
     return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
-
 }
-function ValidarCPF(cpf){
-    cpf = cpf.replace(/[^\d]/g, ''); 
+
+// Função para validar CPF e retornar mensagem de erro
+function validarCPF(cpf) {
+    cpf = cpf.replace(/[^\d]/g, ''); // Remove caracteres não numéricos
     
+    // Verifica o comprimento e se o CPF é uma sequência repetitiva
     if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
-        return false; 
+        return "CPF inválido: o CPF deve ter 11 dígitos e não pode ser uma sequência repetitiva.";
     }
+
     let soma = 0;
     let resto;
 
+    // Validação do primeiro dígito verificador
     for (let i = 0; i < 9; i++) {
         soma += parseInt(cpf.charAt(i)) * (10 - i);
     }
     resto = (soma * 10) % 11;
     if (resto === 10 || resto === 11) resto = 0;
-    if (resto !== parseInt(cpf.charAt(9))) return false;
-    
+    if (resto !== parseInt(cpf.charAt(9))) {
+        return "CPF inválido: o primeiro dígito verificador está incorreto.";
+    }
+
     soma = 0;
-  
+    // Validação do segundo dígito verificador
     for (let i = 0; i < 10; i++) {
         soma += parseInt(cpf.charAt(i)) * (11 - i);
     }
     resto = (soma * 10) % 11;
     if (resto === 10 || resto === 11) resto = 0;
-    if (resto !== parseInt(cpf.charAt(10))) return false;
-    
-    return true;
+    if (resto !== parseInt(cpf.charAt(10))) {
+        return "CPF inválido: o segundo dígito verificador está incorreto.";
+    }
 
+    return ""; // CPF válido
 }
 
 
