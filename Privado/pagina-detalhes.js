@@ -33,3 +33,15 @@ document.querySelectorAll('section[id^="event-"]').forEach(section => {
 
     calculateTotal(section);
 });
+document.getElementById('purchase-button').addEventListener('click', function() {
+    const paymentMethod = document.getElementById('payment-method').value;
+
+    if (paymentMethod === 'registered-card') {
+        alert("Pagamento realizado com o cartão final 1234.");
+    } else if (paymentMethod === 'registered-card-2') {
+        alert("Pagamento realizado com o cartão final 5678.");
+    } else {
+        alert("Por favor, escolha um método de pagamento válido.");
+    }
+});
+
