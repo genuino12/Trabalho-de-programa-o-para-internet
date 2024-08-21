@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            calculateTotal(section); // Inicializa o total ao carregar
+            calculateTotal(section); 
         }
     });
 });
