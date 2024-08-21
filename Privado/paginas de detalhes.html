@@ -32,29 +32,7 @@
             <input type="number" id="ticket-quantity-1" class="ticket-quantity" min="1" max="200" value="1">
             <p>Valor Total: R$ <input type="text" id="total-price-1" class="total-price" value="150.00" readonly></p>
             <button id="purchase-button-1">Comprar</button>
-            
             <p id="purchase-message-1" class="purchase-message"></p>
-            <div id="payment-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close-button">&times;</span>
-                    <h2>Informações de Pagamento</h2>
-                    <form id="payment-form">
-                        <label for="card-name">Nome no Cartão:</label>
-                        <input type="text" id="card-name" required>
-                        
-                        <label for="card-number">Número do Cartão:</label>
-                        <input type="text" id="card-number" required>
-                        
-                        <label for="expiry-date">Data de Validade:</label>
-                        <input type="text" id="expiry-date" placeholder="MM/AA" required>
-                        
-                        <label for="cvv">CVV:</label>
-                        <input type="text" id="cvv" required>
-                        
-                        <button type="submit">Confirmar Pagamento</button>
-                    </form>
-                </div>
-            </div>
         </section>
         
         <section id="event-details">
