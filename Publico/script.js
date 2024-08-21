@@ -152,7 +152,7 @@ function showPurchaseMessage(eventSection) {
     // Esconder a mensagem após alguns segundos (opcional)
     setTimeout(() => {
         purchaseMessage.textContent = '';
-    }, 5000);
+    }, 1000);
 }
 
 // Adiciona eventos para cada seção de evento
