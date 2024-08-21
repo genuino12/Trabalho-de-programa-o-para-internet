@@ -1,35 +1,49 @@
+document.addEventListener('DOMContentLoaded', () => {
+    function calculateTotal(eventSection) {
+        const quantityInput = eventSection.querySelector('.ticket-quantity');
+        const ticketPrice = parseFloat(eventSection.querySelector('.ticket-price').textContent);
+        const totalPriceElement = eventSection.querySelector('.total-price');
 
-function calculateTotal(eventSection) {
-    const quantityInput = eventSection.querySelector('.ticket-quantity');
-    const ticketPrice = parseFloat(eventSection.querySelector('.ticket-price').textContent);
-    const totalPriceInput = eventSection.querySelector('.total-price');
+        const totalPrice = (quantityInput.value * ticketPrice).toFixed(2);
+        totalPriceElement.textContent = totalPrice; // Atualiza o valor exibido na página
+    }
 
-    const totalPrice = (quantityInput.value * ticketPrice).toFixed(2);
-    totalPriceInput.value = totalPrice;
-}
+    function showPurchaseMessage(eventSection) {
+        const purchaseMessage = eventSection.querySelector('.purchase-message');
+        const totalPrice = eventSection.querySelector('.total-price').textContent;
+        const quantity = eventSection.querySelector('.ticket-quantity').value;
 
+        purchaseMessage.textContent = `Compra realizada com sucesso! Você comprou ${quantity} ingresso(s) por um total de R$ ${totalPrice}.`;
+        purchaseMessage.style.color = 'green'; 
 
-function showPurchaseMessage(eventSection) {
-    const purchaseMessage = eventSection.querySelector('.purchase-message');
-    const totalPrice = eventSection.querySelector('.total-price').value;
-    const quantity = eventSection.querySelector('.ticket-quantity').value;
+        setTimeout(() => {
+            purchaseMessage.textContent = '';
+        }, 5000);
+    }
 
-    purchaseMessage.textContent = `Compra realizada com sucesso! Você comprou ${quantity} ingresso(s) por um total de R$ ${totalPrice}.`;
-    purchaseMessage.style.color = 'green'; 
+    document.querySelectorAll('section[id^="event-"]').forEach(section => {
+        const quantityInput = section.querySelector('.ticket-quantity');
+        const purchaseButton = section.querySelector('.purchase-button');
+        const paymentMethodSelect = section.querySelector('.payment-method');
 
+        if (quantityInput && purchaseButton && paymentMethodSelect) {
+            quantityInput.addEventListener('input', () => calculateTotal(section));
 
-    setTimeout(() => {
-        purchaseMessage.textContent = '';
-    }, 5000);
-}
+            purchaseButton.addEventListener('click', () => {
+                const paymentMethod = paymentMethodSelect.value;
 
+                if (paymentMethod === 'registered-card') {
+                    showPurchaseMessage(section);
+                    alert("Pagamento realizado com o cartão final 1234.");
+                } else if (paymentMethod === 'registered-card-2') {
+                    showPurchaseMessage(section);
+                    alert("Pagamento realizado com o cartão final 5678.");
+                } else {
+                    alert("Por favor, escolha um método de pagamento válido.");
+                }
+            });
 
-document.querySelectorAll('section[id^="event-"]').forEach(section => {
-    const quantityInput = section.querySelector('.ticket-quantity');
-    const purchaseButton = section.querySelector('button[id^="purchase-button"]');
-    quantityInput.addEventListener('input', () => calculateTotal(section));
-
-    purchaseButton.addEventListener('click', () => showPurchaseMessage(section));
+            calculateTotal(section); // Inicializa o total ao carregar
+        }
+    });
 });
-
-calculateTotal(section);
