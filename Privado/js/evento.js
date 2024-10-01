@@ -21,8 +21,17 @@ function validarcampos(){
         return true;
     }
     else {
+        exibirmensagem("preenchar todos Campos");
         return false;
     }
+}
+function exibirmensagem(mensagem){
+const divmensagem = document.getElementById('mensagem').value
+divmensagem.innerHTML = "<P>" + mensagem + "</p>";
+setTimeout(() => {
+    divmensagem.innerHTML = "";
+},
+5000);
 }
 
 function exibirtabelaevento(){}
