@@ -26,10 +26,10 @@ function validarcampos(){
     }
 }
 function exibirmensagem(mensagem){
-const divmensagem = document.getElementById('mensagem').value
-divmensagem.innerHTML = "<P>" + mensagem + "</p>";
+const divMensagem = document.getElementById('mensagem').value
+divMensagem.innerHTML = "<P>" + mensagem + "</p>";
 setTimeout(() => {
-    divmensagem.innerHTML = "";
+    divMensagem.innerHTML = "";
 },
 5000);
 }
