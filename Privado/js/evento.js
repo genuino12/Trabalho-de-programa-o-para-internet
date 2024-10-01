@@ -1,15 +1,21 @@
-const formularioevento = document.getElementById('eventForm').value;
-formularioevento.onsubmit = validarcampos;
+const formularioevento = document.getElementById('eventForm');
 
-function gravarevento(){}
 
-function excluirevento(){}
+formularioevento.onsubmit = function(event) {
+    event.preventDefault();
+    
+   
+    if (validarcampos()) {
+        gravarevento();
+    }
+};
 
-function atualizarevento(){}
+function gravarevento() {
+    
+    exibirmensagem("Evento cadastrado com sucesso!");
+}
 
-function buscartodoseventos(){}
-
-function validarcampos(){
+function validarcampos() {
     const nome = document.getElementById('nome').value;
     const descricao = document.getElementById('descricao').value;
     const local_evento = document.getElementById('local_evento').value;
@@ -17,21 +23,24 @@ function validarcampos(){
     const ingressos = document.getElementById('ingressos').value;
     const preco = document.getElementById('preco').value;
 
-    if(nome && descricao && local_evento && data_hora && ingressos && preco){
+    
+    if (nome && descricao && local_evento && data_hora && ingressos && preco) {
         return true;
-    }
-    else {
-        exibirmensagem("preenchar todos Campos");
+    } else {
+        exibirmensagem("Preencha todos os campos.");
         return false;
     }
 }
-function exibirmensagem(mensagem){
-const divMensagem = document.getElementById('mensagem').value
-divMensagem.innerHTML = "<P>" + mensagem + "</p>";
-setTimeout(() => {
-    divMensagem.innerHTML = "";
-},
-5000);
-}
 
-function exibirtabelaevento(){}
+function exibirmensagem(mensagem) {
+    
+    const divmensagem = document.getElementById('mensagem');
+    
+   
+    divmensagem.innerHTML = "<p>" + mensagem + "</p>";
+
+
+    setTimeout(() => {
+        divmensagem.innerHTML = "";
+    }, 5000);
+}
